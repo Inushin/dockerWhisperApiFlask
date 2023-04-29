@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  whisper-api:
+    build: 
+      context: ./
+    hostname: whisper-api
+    container_name: whisper-api
+    restart: always
+    networks:
+      - default
+    ports:
+      - 5000:5000
+    expose:
+      - 5000
